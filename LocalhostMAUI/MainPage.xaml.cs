@@ -13,8 +13,8 @@ public partial class MainPage : ContentPage
 	{
 		var httpClient = new HttpClient();
 		var baseUrl = DeviceInfo.Platform == DevicePlatform.Android
-						? "http://10.0.2.2:5167"
-						: "http://localhost:5167";
+						? "https://192.168.8.103:5001"
+						: "http://192.168.8.103:5000";
 
         var response = await httpClient.GetAsync($"{baseUrl}/WeatherForecast");
 
